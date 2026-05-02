@@ -13,9 +13,9 @@ import {useLanguage} from "@/app/components/languages";
 export default async function RoomDetails({
                                               params,
                                           }: {
-    params: Promise<{ id: string }>
-}) {
+    params: Promise<{ id: string }> }) {
     const { t } = useLanguage();
+
     const router = useRouter();
     console.log("HIT ID PAGE");
     const {id} = await params;
@@ -32,7 +32,8 @@ export default async function RoomDetails({
     return (
         <div className="min-h-screen bg-[#FCFCFC] text-[#1A1A1A] pb-20">
             <nav className="max-w-6xl mx-auto p-6">
-                <Link href="/user/rooms" className="flex items-center gap-2 text-sm uppercase tracking-widest text-gray-400 hover:text-black transition">
+                <Link href="/user/rooms" className="flex items-center gap-2 text-sm uppercase tracking-widest text-gray-400
+                 hover:text-black transition">
                     <ChevronLeft size={16} /> Back to Collection
                 </Link>
             </nav>
@@ -53,15 +54,18 @@ export default async function RoomDetails({
                 </div>
                 <div className="lg:sticky lg:top-10">
                     <span className="text-xs uppercase tracking-[0.2em] text-gray-500 font-medium">Premium Accommodation</span>
-                    <h1 className="text-4xl md:text-5xl font-serif mt-2 mb-4 italic">{room.name}</h1>
+                    <h1 className="text-4xl md:text-5xl font-serif mt-2 mb-4 italic">
+                        {t.roomsPage.rooms[room.name]}
+                    </h1>
                     <p className="text-gray-600 leading-relaxed font-light text-lg border-b border-gray-100 pb-8">
-                        {room.desc}
+                        {t.roomsPage.desc}
                     </p>
                     <div className="py-8">
                         <h3 className="text-xs uppercase tracking-widest font-bold mb-4">Amenities</h3>
                         <div className="flex gap-3 flex-wrap">
                             {room.features.map((f, i) => (
-                                <span key={i} className="flex items-center gap-1.5 border border-gray-200 px-4 py-2 rounded-full text-xs font-medium text-gray-700 bg-white">
+                                <span key={i} className="flex items-center gap-1.5 border border-gray-200 px-4 py-2 rounded-full
+                                 text-xs font-medium text-gray-700 bg-white">
                                     <Check size={12} className="text-gray-400" /> {f}
                                 </span>
                             ))}
@@ -87,7 +91,8 @@ export default async function RoomDetails({
                         </div>
                         <button
                             type={"button"}
-                            onClick={bookRoom} className="w-full mt-8 bg-black text-white py-4 rounded-sm text-sm uppercase tracking-widest hover:bg-zinc-800 transition shadow-lg">
+                            onClick={bookRoom} className="w-full mt-8 bg-black text-white py-4 rounded-sm text-sm uppercase
+                             tracking-widest hover:bg-zinc-800 transition shadow-lg">
                             Book Room
                         </button>
                     </div>
