@@ -90,6 +90,11 @@ export type Translation = {
         helpTitle: string;
         helpDesc: string;
         contactSupport: string;
+        amenities: string;
+        premiumAccommodation: string;
+        backCollection: string;
+        inquiryRates: string;
+        bookRoom: string
     };
 };
 
@@ -182,6 +187,11 @@ export const translations: Record<string, Translation> = {
             helpTitle: "Need help choosing a room?",
             helpDesc: "Contact us and we’ll help you pick the perfect stay.",
             contactSupport: "Contact Support",
+            amenities: "Amenities",
+            premiumAccommodation: "Premium Accommodation",
+            backCollection: "Back to Collection",
+            inquiryRates: "Inquiry & Rates",
+            bookRoom: "Book Room"
         }
     },
     yo: {
@@ -272,6 +282,11 @@ export const translations: Record<string, Translation> = {
             helpTitle: "Ṣé o nílò ìrànlọ́wọ́ láti yan yàrá?",
             helpDesc: "Kan sí wa, a ó ran ọ lọ́wọ́ láti yan ibi tó pé.",
             contactSupport: "Kan sí Ìtìlẹ́yìn",
+            amenities: "Awọn ohun elo",
+            premiumAccommodation: "Ibugbe Didara Giga",
+            backCollection: "Pada si Gbigba",
+            inquiryRates: "Ìbéèrè & Oṣuwọn",
+            bookRoom: "Ṣe ìforúkọsílẹ Yara"
         }
     },
     ig: {
@@ -362,6 +377,11 @@ export const translations: Record<string, Translation> = {
             helpTitle: "Ị chọrọ enyemaka ịhọrọ ụlọ?",
             helpDesc: "Kpọtụrụ anyị, anyị ga-enyere gị ịhọrọ nke kacha mma.",
             contactSupport: "Kpọtụrụ Nkwado",
+            amenities: "Ngwa ụlọ",
+            premiumAccommodation: "Ụlọ obibi dị elu",
+            backCollection: "Laghachi na nchịkọta",
+            inquiryRates: "Ajụjụ & Ọnụahịa",
+            bookRoom: "Debe ụlọ"
         }
     },
     fr: {
@@ -452,6 +472,11 @@ export const translations: Record<string, Translation> = {
             helpTitle: "Besoin d’aide pour choisir une chambre ?",
             helpDesc: "Contactez-nous et nous vous aiderons à trouver le séjour parfait.",
             contactSupport: "Contacter le support",
+            amenities: "Équipements",
+            premiumAccommodation: "Hébergement Premium",
+            backCollection: "Retour à la liste",
+            inquiryRates: "Demande & Tarifs",
+            bookRoom: "Réserver une chambre"
         },
     },
     ko: {
@@ -542,6 +567,11 @@ export const translations: Record<string, Translation> = {
             helpTitle: "객실 선택에 도움이 필요하신가요?",
             helpDesc: "문의하시면 최적의 객실 선택을 도와드립니다.",
             contactSupport: "고객 지원 문의",
+            amenities: "편의 시설",
+            premiumAccommodation: "프리미엄 숙박",
+            backCollection: "목록으로 돌아가기",
+            inquiryRates: "문의 및 요금",
+            bookRoom: "객실 예약"
         }
     },
     zh: {
@@ -632,6 +662,11 @@ export const translations: Record<string, Translation> = {
             helpTitle: "需要帮助选择房间吗？",
             helpDesc: "联系我们，我们会帮您选择最合适的房间。",
             contactSupport: "联系客服",
+            amenities: "设施",
+            premiumAccommodation: "高端住宿",
+            backCollection: "返回列表",
+            inquiryRates: "咨询与价格",
+            bookRoom: "预订房间"
         }
     }
 };
