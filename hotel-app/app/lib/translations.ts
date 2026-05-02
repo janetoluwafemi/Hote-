@@ -96,6 +96,7 @@ export type Translation = {
         inquiryRates: string;
         bookRoom: string
     };
+    guestReviews: string;
 };
 
 export const translations: Record<string, Translation> = {
@@ -104,7 +105,7 @@ export const translations: Record<string, Translation> = {
             home: "Home",
             rooms: "Rooms",
             about: "About",
-            book: "Book Now"
+            book: "Login"
         },
         hero: {
             title: "Comfortable Stays at a Fair Price",
@@ -192,7 +193,8 @@ export const translations: Record<string, Translation> = {
             backCollection: "Back to Collection",
             inquiryRates: "Inquiry & Rates",
             bookRoom: "Book Room"
-        }
+        },
+        guestReviews: "Guest Reviews"
     },
     yo: {
         nav: {
@@ -287,7 +289,8 @@ export const translations: Record<string, Translation> = {
             backCollection: "Pada si Gbigba",
             inquiryRates: "Ìbéèrè & Oṣuwọn",
             bookRoom: "Ṣe ìforúkọsílẹ Yara"
-        }
+        },
+        guestReviews: ""
     },
     ig: {
         nav: {
@@ -382,7 +385,8 @@ export const translations: Record<string, Translation> = {
             backCollection: "Laghachi na nchịkọta",
             inquiryRates: "Ajụjụ & Ọnụahịa",
             bookRoom: "Debe ụlọ"
-        }
+        },
+        guestReviews: ""
     },
     fr: {
         nav: {
@@ -478,6 +482,7 @@ export const translations: Record<string, Translation> = {
             inquiryRates: "Demande & Tarifs",
             bookRoom: "Réserver une chambre"
         },
+        guestReviews: ""
     },
     ko: {
         nav: {
@@ -572,7 +577,8 @@ export const translations: Record<string, Translation> = {
             backCollection: "목록으로 돌아가기",
             inquiryRates: "문의 및 요금",
             bookRoom: "객실 예약"
-        }
+        },
+        guestReviews: ""
     },
     zh: {
         nav: {
@@ -667,6 +673,7 @@ export const translations: Record<string, Translation> = {
             backCollection: "返回列表",
             inquiryRates: "咨询与价格",
             bookRoom: "预订房间"
-        }
+        },
+        guestReviews: ""
     }
 };

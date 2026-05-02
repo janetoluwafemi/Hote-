@@ -22,7 +22,7 @@ export default function RoomsPage() {
             </nav>
             <section className="relative h-[50vh] flex items-center justify-center text-white">
                 <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0DC0xZUujGDt7OvGdmPmJoBb3NxVPee-hTQ&s"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBikw1ROHnFMd7XStKcbeZJ64DQRehNbCWBQ&s"
                     className="absolute inset-0 w-full h-full object-cover"
                     alt="Rooms hero"
                 />

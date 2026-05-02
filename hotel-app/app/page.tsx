@@ -1,20 +1,25 @@
 "use client"
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Star } from "lucide-react";
 import { useRouter } from "next/navigation";
 import {Footer} from "@/app/components/footer";
 import { useLanguage } from "@/app/components/languages";
+import {reviews} from "@/app/lib/reviews"
 
 export default function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
 
     const { t } = useLanguage();
+    const login = () => {
+        router.push("/user/login");
+    }
+
     return (
         <div className="font-sans text-gray-900 overflow-x-hidden">
             <section className="relative min-h-[70vh] md:min-h-[60vh] py-20 flex items-center justify-center text-white">
                 <img
-                    src="https://media-cdn.tripadvisor.com/media/photo-s/12/ea/5a/92/beds-are-fine-but-not.jpg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3j7gfv_1dZuI0JuWnR4HCmC_Cxwwgha4pAA&s"
                     alt="hotel room"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -27,7 +32,7 @@ export default function App() {
                         <a href="/" className="hover:opacity-70 transition">{t.nav.home}</a>
                         <a href="/user/rooms" className="hover:opacity-70 transition">{t.nav.rooms}</a>
                         <a href="#" className="hover:opacity-70 transition">{t.nav.about}</a>
-                        <button className="border border-white/40 px-5 py-2 rounded-full hover:bg-white hover:text-black transition duration-300">
+                        <button onClick={login} className="border border-white/40 px-5 py-2 rounded-full hover:bg-white hover:text-black transition duration-300">
                             {t.nav.book}
                         </button>
                     </div>
@@ -59,7 +64,7 @@ export default function App() {
                     </button>
                 </div>
             </section>
-            <section className="py-20 px-6 md:px-10 bg-white text-center">
+            <section className="py-20 px-6 md:px-10 bg-gray-50 text-center">
                 <h3 className="text-3xl md:text-4xl font-light mb-12 md:mb-16">
                     {t.features.title}
                 </h3>
@@ -81,7 +86,7 @@ export default function App() {
             <section className="grid grid-cols-1 md:grid-cols-2 bg-white">
                 <div className="h-64 md:h-auto order-1 md:order-none">
                     <img
-                        src="https://media-cdn.tripadvisor.com/media/daodao/photo-s/01/bd/21/2e/caption.jpg"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_WcvLXJ0dVw-DUwpgbQERbMhLnCglbWzdAQ&s"
                         alt="hotel room"
                         className="w-full h-full object-cover"
                     />
@@ -101,6 +106,27 @@ export default function App() {
                     </div>
                 </div>
             </section>
+            <section className="py-20 px-6 md:px-10 bg-gray-50">
+                <div className="max-w-6xl mx-auto">
+                    <h3 className="text-3xl font-light text-center mb-16 text-gray-900">Guest Reviews</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {reviews.map((review) => (
+                            <div key={review.id} className="p-6 bg-gray-200 rounded-xl border border-gray-100">
+                                <div className="flex items-center space-x-4 mb-4">
+                                    <img src={review.img} alt={review.name} className="w-12 h-12
+                                    rounded-full object-cover" />
+                                    <div>
+                                        <h4 className="text-sm font-semibold">{review.name}</h4>
+                                        <div className="flex text-yellow-500"><Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /></div>
+                                    </div>
+                                </div>
+                                <p className="text-gray-600 text-sm italic leading-relaxed">"{review.text}"</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             <section className="py-16 px-6 text-center bg-gray-900 text-white">
                 <h3 className="text-2xl md:text-3xl font-medium mb-3">
                     {t.cta.title}
