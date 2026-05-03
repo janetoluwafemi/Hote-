@@ -1,24 +1,24 @@
 "use client"
 import React, { useState } from 'react';
 
-interface loginData {
+type loginData = {
     email: string;
     password: string;
 }
 export default function LoginPage () {
     const [isLoading, setIsLoading] = useState(false);
-    const [data, setData] = useState<loginData[]>({
+    const [data, setData] = useState<loginData>({
         email: "",
         password: ""
     });
     const [showPassword, setShowPassword] = useState(false);
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setData({
             ...data,
             [e.target.name]: e.target.value
         })
     }
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
 

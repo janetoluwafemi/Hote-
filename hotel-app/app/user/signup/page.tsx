@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 
-interface signUpData {
+type signUpData = {
     username: string;
     phoneNumber: string
     email: string;
@@ -10,19 +10,19 @@ interface signUpData {
 export default function SignUpPage () {
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const [data, setData] = useState<signUpData[]>({
+    const [data, setData] = useState<signUpData>({
         username: "",
         phoneNumber: "",
         email: "",
         password: ""
     });
-    const handleSignUpChange = (e) => {
+    const handleSignUpChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setData({
             ...data,
             [e.target.name]: e.target.value
         })
     }
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
 
