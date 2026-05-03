@@ -45,7 +45,7 @@ export default function SignUpPage () {
                             className="mt-1 block w-full text-black px-3 py-2 border border-gray-300 rounded-md
                              shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                             placeholder="you@example.com"
-                            value={data.userName}
+                            value={data.username}
                             onChange={handleSignUpChange}
                         />
                     </div>
