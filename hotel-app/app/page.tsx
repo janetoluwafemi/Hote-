@@ -32,7 +32,8 @@ export default function App() {
                         <a href="/" className="hover:opacity-70 transition">{t.nav.home}</a>
                         <a href="/user/rooms" className="hover:opacity-70 transition">{t.nav.rooms}</a>
                         <a href="#" className="hover:opacity-70 transition">{t.nav.about}</a>
-                        <button onClick={login} className="border border-white/40 px-5 py-2 rounded-full hover:bg-white hover:text-black transition duration-300">
+                        <button onClick={login} className="border border-white/40 px-5 py-2 rounded-full
+                         hover:bg-white hover:text-black transition duration-300">
                             {t.nav.book}
                         </button>
                     </div>
@@ -41,7 +42,8 @@ export default function App() {
                     </button>
                 </nav>
                 {isMenuOpen && (
-                    <div className="fixed inset-0 bg-black z-40 flex flex-col items-center justify-center space-y-8 text-2xl font-light md:hidden">
+                    <div className="fixed inset-0 bg-black z-40 flex flex-col items-center justify-center
+                     space-y-8 text-2xl font-light md:hidden">
                         <a href="#" onClick={() => setIsMenuOpen(false)}>{t.nav.home}</a>
                         <a href="#" onClick={() => setIsMenuOpen(false)}>{t.nav.rooms}</a>
                         <a href="#" onClick={() => setIsMenuOpen(false)}>{t.nav.about}</a>
@@ -59,16 +61,18 @@ export default function App() {
                     </p>
                     <button
                         onClick={() => router.push("/user/rooms")}
-                        className="bg-white text-black px-8 py-4 rounded-full text-sm tracking-wide hover:scale-105 transition-transform duration-300">
+                        className="bg-white text-black px-8 py-4 rounded-full text-sm tracking-wide
+                         hover:scale-105 transition-transform duration-300">
                         {t.hero.button}
                     </button>
                 </div>
             </section>
-            <section className="py-20 px-6 md:px-10 bg-gray-50 text-center">
+            <section className="py-20 px-6 md:px-10 bg-gray-200 text-center">
                 <h3 className="text-3xl md:text-4xl font-light mb-12 md:mb-16">
                     {t.features.title}
                 </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-12 max-w-6xl mx-auto text-left md:text-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-12 max-w-6xl
+                 mx-auto text-left md:text-center">
                     <div>
                         <h4 className="text-xl mb-3 font-medium">{t.features.f1}</h4>
                         <p className="text-gray-500 text-sm md:text-base">{t.features.f1d}</p>
@@ -91,7 +95,7 @@ export default function App() {
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <div className="flex items-center justify-center p-8 sm:p-12 md:p-20 bg-gray-50 order-2">
+                <div className="flex items-center justify-center p-8 sm:p-12 md:p-20 bg-gray-200 order-2">
                     <div className="max-w-md">
                         <h3 className="text-2xl md:text-3xl font-medium mb-4 text-gray-900">
                             {t.section.title}
@@ -100,24 +104,27 @@ export default function App() {
                             {t.section.desc}
                         </p>
                         <button
-                            className="border border-gray-300 px-6 py-3 rounded-md text-sm hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                            className="border border-gray-300 px-6 py-3 rounded-md text-sm hover:bg-gray-900
+                             hover:text-white transition-colors duration-300">
                             {t.section.button}
                         </button>
                     </div>
                 </div>
             </section>
-            <section className="py-20 px-6 md:px-10 bg-gray-50">
+            <section className="py-20 px-6 md:px-10 bg-gray-200">
                 <div className="max-w-6xl mx-auto">
                     <h3 className="text-3xl font-light text-center mb-16 text-gray-900">Guest Reviews</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {reviews.map((review) => (
-                            <div key={review.id} className="p-6 bg-gray-200 rounded-xl border border-gray-100">
+                            <div key={review.id} className="p-6 bg-gray-100 rounded-xl border border-gray-100">
                                 <div className="flex items-center space-x-4 mb-4">
                                     <img src={review.img} alt={review.name} className="w-12 h-12
                                     rounded-full object-cover" />
                                     <div>
                                         <h4 className="text-sm font-semibold">{review.name}</h4>
-                                        <div className="flex text-yellow-500"><Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /></div>
+                                        <div className="flex text-yellow-500"><Star size={12} fill="currentColor" />
+                                            <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" />
+                                            <Star size={12} fill="currentColor" /> <Star size={12} fill="currentColor" /></div>
                                     </div>
                                 </div>
                                 <p className="text-gray-600 text-sm italic leading-relaxed">"{review.text}"</p>
@@ -134,7 +141,8 @@ export default function App() {
                 <p className="text-gray-400 mb-6 text-sm">
                     {t.cta.desc}
                 </p>
-                <button className="bg-white text-gray-900 px-8 py-3 rounded-md text-sm font-medium hover:opacity-90 transition">
+                <button className="bg-white text-gray-900 px-8 py-3 rounded-md text-sm font-medium
+                hover:opacity-90 transition">
                     {t.cta.button}
                 </button>
             </section>

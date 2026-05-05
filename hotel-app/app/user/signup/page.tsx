@@ -33,7 +33,7 @@ export default function SignUpPage () {
         <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
             <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
                 <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-                    Sign In
+                    Sign Up
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
@@ -103,13 +103,13 @@ export default function SignUpPage () {
                          rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700
                           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
                     >
-                        {isLoading ? "Signing in..." : "Sign In"}
+                        {isLoading ? "Signing in..." : "Sign Up"}
                     </button>
                 </form>
                 <p className="mt-6 text-center text-sm text-gray-600">
-                    Don't have an account?{' '}
-                    <a href="/user/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
-                        Sign up
+                    Already have an account?{' '}
+                    <a href="/user/login" className="font-medium text-indigo-600 hover:text-indigo-500">
+                        Sign in
                     </a>
                 </p>
             </div>

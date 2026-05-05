@@ -14,9 +14,10 @@ export default function RoomsPage() {
     const { t } = useLanguage();
 
     return (
-        <div className="min-h-screen bg-gray-50 text-gray-900">
+        <div className="min-h-screen bg-gray-200 text-gray-900">
             <nav className="max-w-6xl mx-auto p-6">
-                <Link href="/" className="flex items-center gap-2 text-sm uppercase tracking-widest text-gray-400 hover:text-black transition">
+                <Link href="/" className="flex items-center gap-2 text-sm uppercase tracking-widest
+                 text-gray-400 hover:text-black transition">
                     <ChevronLeft size={16} /> {t.roomsPage.backHome}
                 </Link>
             </nav>
@@ -65,12 +66,12 @@ export default function RoomsPage() {
                                             key={idx}
                                             className="text-xs bg-gray-100 px-3 py-1 rounded-full"
                                         >
-    {t.roomsPage.benefits[f]}
-                    </span>
+                                            {t.roomsPage.benefits[f]}
+                                        </span>
                                     ))}
                                 </div>
 
-                                <div className="mt-6 flex items-center justify-between">
+                                <div className="mt-6  flex items-center justify-between">
                                     <p className="font-semibold">
                                         1hr ₦{room.price.short1hr} • 2hrs ₦{room.price.short2hr}
                                     </p>
@@ -86,9 +87,9 @@ export default function RoomsPage() {
                     ))}
                 </div>
             </section>
-            <section className="bg-white text-black py-16 text-center">
+            <section className="bg-gray-900 text-white py-16 text-center">
                 <h2 className="text-3xl font-light">{t.roomsPage.helpTitle}</h2>
-                <p className="text-white/60 mt-2 text-sm">
+                <p className="mt-2 text-sm">
                     {t.roomsPage.helpDesc}
                 </p>
 

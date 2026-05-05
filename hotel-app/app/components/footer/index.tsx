@@ -8,7 +8,7 @@ export const Footer = () => {
     const { t, language, setLanguage } = useLanguage();
 
     return (
-        <footer className="bg-gray-50 border-t border-gray-200 text-black">
+        <footer className="bg-gray-200 border-t border-gray-200 text-black">
             <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                 <div className="sm:col-span-2 lg:col-span-1">
                     <h2 className="text-lg font-semibold mb-3">{t.footer.eliteHotel}</h2>
@@ -48,14 +48,14 @@ export const Footer = () => {
                     </select>
                 </div>
             </div>
-            <div className="max-w-6xl bg-gray-50 mx-auto px-6 py-8 border-t border-gray-100 grid grid-cols-1
+            <div className="max-w-6xl bg-gray-200 mx-auto px-6 py-8 border-t border-gray-400 grid grid-cols-1
              sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-black font-medium">
                 <div className="flex items-center gap-4"><Phone size={18}/> {t.contact.phone}</div>
                 <div className="flex items-center gap-4"><Mail size={18}/> {t.contact.email}</div>
                 <div className="flex items-center gap-4"><MapPin size={18}/> {t.contact.location}</div>
                 <div className="flex items-center gap-4"><Clock size={18}/> {t.contact.clock}</div>
             </div>
-            <div className="bg-gray-50 border-t border-gray-200 py-6">
+            <div className="bg-gray-200 border-t border-gray-200 py-6">
                 <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between
                  items-center gap-4 text-[10px] sm:text-xs text-black">
                     <p className="font-medium">{t.footer.reserved}</p>
