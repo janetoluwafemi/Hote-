@@ -1,5 +1,7 @@
 "use client"
 import React, { useState } from 'react';
+import {signInWithPopup} from "firebase/auth";
+import {auth, provider} from "@/firebase"
 
 type loginData = {
     email: string;
@@ -25,12 +27,44 @@ export default function LoginPage () {
         alert("Logged In Successfully!");
         setTimeout(() => setIsLoading(false), 2000);
     };
+    const handleGoogleLogin = async () => {
+        try {
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user;
+            console.log("User logged in with Google:", user);
+            console.log("FIRST LOGIN PAGE LOADED");
+            alert("Welcome back " + user.displayName + "!")
+            console.log("SECOND LOGIN PAGE LOADED");
+        } catch (error) {
+            console.error("Error logging in with Google:", error);
+        }
+    }
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
             <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
                 <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
                     Welcome Back
                 </h2>
+                <div>
+                    <button
+                        onClick={handleGoogleLogin}
+                        className="flex items-center mb-3 justify-center gap-2 rounded-2xl border
+                         w-full py-2 text-sm text-black hover:bg-gray-100 transition"
+                    >
+                        <img
+                            src="https://website.cdn.speechify.com/google-1.svg"
+                            alt="Google"
+                            width={20}
+                            height={20}
+                        />
+                        <span>Continue with Google</span>
+                    </button>
+                    <div className="flex items-center my-8">
+                        <hr className="flex-grow border-gray-300" />
+                        <span className="mx-4 text-gray-500 text-sm">OR</span>
+                        <hr className="flex-grow border-gray-300" />
+                    </div>
+                </div>
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                         <label className="block text-sm font-medium text-gray-700">Email Address</label>
