@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import {signInWithPopup} from "firebase/auth";
 import {auth, provider} from "@/firebase";
+import {useRouter} from "next/navigation";
 
 type signUpData = {
     username: string;
@@ -24,6 +25,7 @@ export default function SignUpPage () {
             [e.target.name]: e.target.value
         })
     }
+    const router = useRouter();
     const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
@@ -37,6 +39,7 @@ export default function SignUpPage () {
             const user = result.user;
             console.log("User logged in with Google:", user);
             alert("Welcome back " + user.displayName + "!")
+            router.push("/user/login");
         } catch (error) {
             console.error("Error logging in with Google:", error);
         }

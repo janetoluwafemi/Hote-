@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import {signInWithPopup} from "firebase/auth";
 import {auth, provider} from "@/firebase"
+import {useRouter} from "next/navigation";
 
 type loginData = {
     email: string;
@@ -20,6 +21,7 @@ export default function LoginPage () {
             [e.target.name]: e.target.value
         })
     }
+    const router = useRouter();
     const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
@@ -35,6 +37,7 @@ export default function LoginPage () {
             console.log("FIRST LOGIN PAGE LOADED");
             alert("Welcome back " + user.displayName + "!")
             console.log("SECOND LOGIN PAGE LOADED");
+            router.push("/user/rooms");
         } catch (error) {
             console.error("Error logging in with Google:", error);
         }
